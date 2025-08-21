@@ -1,9 +1,7 @@
-import React from "react";
-
 export default function LoginForm() {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-[#EDEDED] p-8">
-      <div className="w-[1200px] h-[800px] flex bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-lg">
+      <div className="w-[1200px] h-[800px] flex bg-[#FFFFFF] rounded-[32px] overflow-hidden">
         {/* Left side - Image */}
         <div
           className="w-[744px] h-full rounded-l-[32px]"
@@ -15,7 +13,7 @@ export default function LoginForm() {
         />
 
         {/* Right side - Form */}
-        <div className="w-[456px] h-full flex justify-center items-center px-12">
+        <div className="w-[456px] h-full flex justify-center items-start px-12 pt-16">
           <div className="w-[360px] flex flex-col">
             {/* Logo section */}
             <div className="flex justify-start items-start pb-[80px]">
@@ -40,15 +38,23 @@ export default function LoginForm() {
                     "linear-gradient(0deg, #ECEEF1 0%, #ECEEF1 100%),linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%)",
                 }}
               >
-                <p className="flex-1 text-[#737A86] font-['Inter']">Email</p>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="flex-1 text-[#737A86] font-['Inter'] bg-transparent outline-none placeholder:text-[#737A86]"
+                />
               </div>
             </div>
 
             {/* Password field */}
             <div className="pb-4">
               <div className="h-[56px] flex w-[360px] justify-start items-center flex-row gap-3 px-4 bg-[#ECEEF1] rounded-xl">
-                <p className="flex-1 text-[#737A86] font-['Inter']">Password</p>
-                <div>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="flex-1 text-[#737A86] font-['Inter'] bg-transparent outline-none placeholder:text-[#737A86]"
+                />
+                <div className="cursor-pointer">
                   <img
                     src="icon-visibility_off.png"
                     alt="icon-visibility_off placeholder"
@@ -59,18 +65,18 @@ export default function LoginForm() {
 
             {/* Forgot password */}
             <div className="flex w-[360px] justify-end items-start flex-row gap-2.5 pb-[32px]">
-              <span className="text-[#007AFF] text-sm font-['Inter'] text-right font-semibold">
+              <button className="text-[#007AFF] text-sm font-['Inter'] text-right font-semibold cursor-pointer hover:opacity-80">
                 Forgot password?
-              </span>
+              </button>
             </div>
 
             {/* Sign in button */}
             <div className="flex w-[360px] justify-start items-start flex-col gap-2.5 pb-[32px]">
-              <div className="h-[52px] flex w-[360px] justify-center items-center flex-row px-4 bg-[#007AFF] rounded-lg">
+              <button className="h-[52px] flex w-[360px] justify-center items-center flex-row px-4 bg-[#007AFF] rounded-lg cursor-pointer hover:bg-[#0056CC] transition-colors">
                 <span className="text-[#FFFFFF] font-['Inter'] text-right font-bold">
                   Sign in
                 </span>
-              </div>
+              </button>
             </div>
 
             {/* Create account */}
@@ -78,9 +84,9 @@ export default function LoginForm() {
               <span className="text-[#737A86] text-sm font-['Inter']">
                 Don't have an account?
               </span>
-              <span className="text-[#007AFF] text-sm font-['Inter'] text-right font-semibold">
+              <button className="text-[#007AFF] text-sm font-['Inter'] text-right font-semibold cursor-pointer hover:opacity-80">
                 Create account
-              </span>
+              </button>
             </div>
           </div>
         </div>
